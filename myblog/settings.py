@@ -25,7 +25,7 @@ SECRET_KEY = '@io%tmxlwfw9su-ha%_m_)y12*+vt2*xqozgwdq#j+hasu0(+y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['katedjango.pythonanywhere.com']
 
 
 # Application definition
