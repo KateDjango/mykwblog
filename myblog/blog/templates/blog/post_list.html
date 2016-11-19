@@ -9,15 +9,12 @@
   <div>
       <h3>Witam na moim magicznym blogu!</h3>
   </div>
-  <div>
-    <h2><a href="">Witamy w świecie DjangoGirls!</a></h2>
-    <p>Dziś w Krakowie mamy 3-cie warsztaty DjangoGirls Krakow. Dziewczyny przygotowały super szkolenie, sponsorzy postarali się o dobre jedzonko, mentorki mega motywują i uchylają rąbka czarnej magii dla zielonych. <b>JESTEŚMY ZAJEBISTE!</b></p>
-    <p>published: 19.11.2016, 16:29</p>
-</div>
-<div>
-    <h2><a href="">Python. Czy udusi jak boa?</a></h2>
-    <p>Siedzę sobie i piszę. Piszę i myślę i kminię. Siedzę myśle i kminię i moje zwoje się przegrzewają! :D <b>lol</b> </p>
-    <p>published: 19.11.2016, 16:31</p>
-</div>
+  {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h3><a href="">{{ post.title }}</a></h3>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
